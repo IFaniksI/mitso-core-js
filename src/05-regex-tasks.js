@@ -5,7 +5,7 @@
  *                                                                                           *
  * You can use the next web site in order to check and build regexps:                        *
  * https://regexr.com                                                                        *
- *                                                                                           *
+ *                                      Регулярки больно                                     *
  ******************************************************************************************* */
 
 /**
@@ -30,8 +30,8 @@
  *
  * @return {RegExp}
  */
-function getRegexForGuid() {
-  throw new Error('Not implemented');
+ function getRegexForGuid() {
+  return /{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}}/;
 }
 
 /**
@@ -52,7 +52,7 @@ function getRegexForGuid() {
  *
  */
 function getRegexForPitSpot() {
-  throw new Error('Not implemented');
+  return /p.t/;
 }
 
 /**
@@ -75,8 +75,8 @@ function getRegexForPitSpot() {
  *   'PASSW0RD'.match(validator)  => false
  *   'Pa55'.match(validator) => false
  */
-function getPasswordValidator(/* minLength */) {
-  throw new Error('Not implemented');
+function getPasswordValidator(minLength) {
+  return new RegExp(`^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[0-9a-zA-Z]{${minLength},}$`, '');
 }
 
 module.exports = {
