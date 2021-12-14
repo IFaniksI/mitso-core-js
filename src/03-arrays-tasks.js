@@ -579,6 +579,7 @@ return arr;
  *   [ 1, 2, 3, 4, 5, 6, 7, 8 ]   =>  [ 5, 6, 7, 8, 1, 2, 3, 4 ]
  *
  */
+
 function swapHeadAndTail( arr) {
   let len = arr.length;
   if (len%2 == 0)  return arr.splice(len/2, len/2).concat(arr) ;
